@@ -1,0 +1,17 @@
+version: "3.5"
+services:
+  cs:
+    image: kmallea/csgo
+    container_name: cs
+    ports:
+      - 27015:27015
+      - 27020:27020
+    environment:
+      - SERVER_HOSTNAME=M.B.R CSGO
+      - SERVER_PASSWORD=yallahapoel
+      - MAXPLAYERS=14
+      - LAN=0
+      - SOURCEMOD_ADMINS=STEAM_1:0:158288877
+      - STEAM_ACCOUNT=
+      - RCON_PASSWORD=
+    network_mode: "host"
