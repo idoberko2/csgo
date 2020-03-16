@@ -1,0 +1,21 @@
+version: "3.5"
+services:
+  cs:
+    image: cm2network/csgo
+    container_name: cs
+    ports:
+      - 27015:27015
+      - 27020:27020
+    environment:
+      - SRCDS_RCONPW=
+      - SRCDS_PW=yallahapoel
+      - SRCDS_PORT=27015
+      - SRCDS_TV_PORT=27020
+      - SRCDS_FPSMAX=300
+      - SRCDS_TICKRATE=128
+      - SRCDS_MAXPLAYERS=14
+      - SRCDS_STARTMAP=de_dust2
+      - SRCDS_REGION=3
+      - SRCDS_MAPGROUP=mg_active
+      - SRCDS_TOKEN=
+    network_mode: "host"
